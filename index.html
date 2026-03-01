@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRMInsider - Professional CRM Software Reviews & Comparisons</title>
+    <title>Mo.333 - Developer Reviews | CRM & DevOps Tools for IT Professionals</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
             line-height: 1.6;
-            color: #ffffff;
-            background: linear-gradient(135deg, #0a0a0b 0%, #1a1a1d 50%, #2c2c31 100%);
+            color: #e1e5e9;
+            background: #0d1117;
             min-height: 100vh;
         }
 
@@ -27,14 +27,14 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #0a0a0b 0%, #1a1a1d 50%, #2c2c31 100%);
-            border-bottom: 3px solid #ffc107;
-            color: white;
-            padding: 1.5rem 0;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+            color: #f0f6fc;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 8px 32px rgba(255, 193, 7, 0.15);
+            backdrop-filter: blur(10px);
         }
 
         nav {
@@ -44,13 +44,16 @@
         }
 
         .logo {
-            font-size: 2.2rem;
-            font-weight: 900;
+            font-size: 1.5rem;
+            font-weight: 700;
             text-decoration: none;
-            color: #ffc107;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+            color: #58a6ff;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .logo::before {
+            content: "$ ";
+            color: #7c3aed;
         }
 
         .nav-links {
@@ -60,165 +63,179 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #f0f6fc;
             text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
+            font-weight: 400;
+            transition: color 0.3s;
+            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            color: #58a6ff;
         }
 
         /* Hero Section */
         .hero {
-            background: radial-gradient(ellipse at center, #1a1a1d 0%, #0a0a0b 70%);
-            border: 1px solid #333;
-            color: white;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #f0f6fc;
             text-align: center;
-            padding: 6rem 0;
-            position: relative;
-            overflow: hidden;
+            padding: 4rem 0;
+            border-bottom: 1px solid #30363d;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffc107;
-            text-shadow: 0 0 30px rgba(255, 193, 7, 0.6);
+            font-weight: 700;
+            color: #f0f6fc;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero .highlight {
+            color: #58a6ff;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
-            background: #10b981;
+            background: #238636;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+            font-family: inherit;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+            background: #2ea043;
+            transform: translateY(-1px);
         }
 
         /* Main Content */
         main {
-            padding: 4rem 0;
+            padding: 3rem 0;
         }
 
         .section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             text-align: center;
-            margin-bottom: 3rem;
-            color: #1f2937;
-            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #f0f6fc;
+            font-weight: 600;
         }
 
-        /* CRM Categories Grid */
-        .crm-categories {
+        /* Tool Categories Grid */
+        .dev-categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
-        .crm-category {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e5e7eb;
+        .dev-category {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: border-color 0.3s, transform 0.3s;
         }
 
-        .crm-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        .dev-category:hover {
+            border-color: #58a6ff;
+            transform: translateY(-2px);
         }
 
-        .crm-category h3 {
-            font-size: 1.5rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
+        .dev-category h3 {
+            font-size: 1.2rem;
+            color: #58a6ff;
+            margin-bottom: 0.8rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .crm-category p {
-            color: #6b7280;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+        .dev-category p {
+            color: #8b949e;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
-        .crm-list {
+        .tool-list {
             list-style: none;
         }
 
-        .crm-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e5e7eb;
+        .tool-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #21262d;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 0.85rem;
         }
 
-        .crm-list li:last-child {
+        .tool-list li:last-child {
             border-bottom: none;
         }
 
-        .crm-name {
+        .tool-name {
+            font-weight: 500;
+            color: #f0f6fc;
+        }
+
+        .tool-rating {
+            color: #f85149;
             font-weight: 600;
-            color: #374151;
+            font-size: 0.8rem;
         }
 
-        .crm-pricing {
-            color: #10b981;
-            font-weight: bold;
-            font-size: 0.9rem;
+        .tool-pricing {
+            color: #238636;
+            font-weight: 500;
+            font-size: 0.8rem;
         }
 
-        .crm-rating {
-            color: #f59e0b;
-            font-weight: bold;
+        .tool-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.2rem;
         }
 
-        /* Detailed CRM Comparison */
+        /* Comparison Section */
         .comparison-section {
-            background: white;
-            border-radius: 15px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .comparison-header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            color: white;
-            padding: 1.5rem;
-            font-size: 1.3rem;
+            background: #21262d;
+            color: #f0f6fc;
+            padding: 1rem;
+            font-size: 1rem;
             font-weight: 600;
+            border-bottom: 1px solid #30363d;
         }
 
         .comparison-table {
@@ -228,196 +245,197 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 800px;
+            min-width: 700px;
+            font-size: 0.85rem;
         }
 
         th, td {
-            padding: 1rem;
+            padding: 0.8rem;
             text-align: left;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid #21262d;
         }
 
         th {
-            background: #f9fafb;
+            background: #0d1117;
             font-weight: 600;
-            color: #1f2937;
-            position: sticky;
-            top: 0;
+            color: #f0f6fc;
         }
 
         .feature-excellent {
-            color: #10b981;
-            font-weight: bold;
+            color: #238636;
+            font-weight: 600;
         }
 
         .feature-good {
-            color: #3b82f6;
-            font-weight: bold;
+            color: #58a6ff;
+            font-weight: 600;
         }
 
         .feature-fair {
-            color: #f59e0b;
-            font-weight: bold;
+            color: #d29922;
+            font-weight: 600;
         }
 
         .feature-poor {
-            color: #ef4444;
-            font-weight: bold;
+            color: #f85149;
+            font-weight: 600;
         }
 
         .feature-missing {
-            color: #9ca3af;
-            font-weight: bold;
+            color: #6e7681;
+            font-weight: 600;
         }
 
-        /* CRM Reviews */
+        /* Reviews */
         .reviews-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
-        .crm-review {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-left: 5px solid #4f46e5;
+        .dev-review {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 3px solid #58a6ff;
         }
 
         .review-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .review-title {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            color: #1f2937;
+            color: #f0f6fc;
         }
 
         .review-score {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: #238636;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.8rem;
         }
 
         .review-content {
-            color: #374151;
-            line-height: 1.7;
+            color: #8b949e;
+            line-height: 1.6;
+            font-size: 0.9rem;
         }
 
         .pros-cons {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
         }
 
         .pros, .cons {
             padding: 1rem;
-            border-radius: 10px;
+            border-radius: 6px;
+            border: 1px solid #21262d;
         }
 
         .pros {
-            background: #f0fdf4;
-            border-left: 4px solid #10b981;
+            background: #0f1419;
+            border-left: 3px solid #238636;
         }
 
         .cons {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
-        }
-
-        .pros h4, .cons h4 {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            background: #0f1419;
+            border-left: 3px solid #f85149;
         }
 
         .pros h4 {
-            color: #059669;
+            color: #238636;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .cons h4 {
-            color: #dc2626;
+            color: #f85149;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .pros ul, .cons ul {
+            font-size: 0.8rem;
+            padding-left: 1rem;
+        }
+
+        .pros ul li, .cons ul li {
+            margin-bottom: 0.3rem;
         }
 
         .feature-highlight {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 10px;
+            background: #0f1419;
+            padding: 1rem;
+            border-radius: 6px;
             margin: 1rem 0;
-            border-left: 4px solid #4f46e5;
-        }
-
-        /* Industry-specific sections */
-        .industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .industry-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .industry-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .industry-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .industry-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #1f2937;
-            font-weight: 600;
+            border-left: 3px solid #58a6ff;
+            font-size: 0.9rem;
         }
 
         /* Footer */
         footer {
-            background: #1f2937;
-            color: white;
+            background: #010409;
+            color: #8b949e;
             text-align: center;
-            padding: 3rem 0;
-            margin-top: 4rem;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid #21262d;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
         }
 
         .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #e5e7eb;
+            margin-bottom: 0.8rem;
+            color: #f0f6fc;
+            font-size: 0.9rem;
         }
 
         .footer-section a {
-            color: #9ca3af;
+            color: #8b949e;
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #58a6ff;
+        }
+
+        /* GitHub-style badge */
+        .github-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #21262d;
+            color: #f0f6fc;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            border: 1px solid #30363d;
+            transition: border-color 0.3s;
+        }
+
+        .github-badge:hover {
+            border-color: #58a6ff;
         }
 
         /* Mobile Responsive */
@@ -427,14 +445,14 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.4rem;
             }
 
-            .crm-categories {
+            .dev-categories {
                 grid-template-columns: 1fr;
             }
 
@@ -451,165 +469,169 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">CRMInsider</a>
+            <a href="#" class="logo">Mo.333</a>
             <ul class="nav-links">
-                <li><a href="#crms">CRM Tools</a></li>
-                <li><a href="#comparisons">Comparisons</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#comparisons">Compare</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#devops">DevOps</a></li>
+                <li><a href="#api">API</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>Find Your Perfect CRM Solution</h1>
-            <p>Expert reviews and comprehensive comparisons of top Customer Relationship Management software</p>
-            <a href="#crms" class="cta-button">Explore CRMs</a>
+            <h1><span class="highlight">Mo.333</span> - Developer Reviews</h1>
+            <p>No-BS reviews of CRM, DevOps, and business tools from developers who actually use them in production. GitHub-hosted for transparency.</p>
+            <a href="#tools" class="cta-button">Browse Reviews</a>
+            <br>
+            <a href="https://github.com/mo-dot-333/developer-reviews" class="github-badge">
+                <span>⭐</span> Star on GitHub
+            </a>
         </div>
     </section>
 
     <main class="container">
-        <section id="crms" class="section">
-            <h2 class="section-title">Top CRM Categories</h2>
+        <section id="tools" class="section">
+            <h2 class="section-title">Developer-Focused Tool Categories</h2>
             
-            <div class="crm-categories">
-                <div class="crm-category">
-                    <h3>🚀 Startup & Small Business CRMs</h3>
-                    <p>Perfect for growing businesses that need powerful CRM features without enterprise complexity and pricing.</p>
-                    <ul class="crm-list">
+            <div class="dev-categories">
+                <div class="dev-category">
+                    <h3>🛠️ CRM for Dev Teams</h3>
+                    <p>CRMs that integrate with your existing workflow - GitHub, Slack, Jira. Reviewed by developers who hate bad UX.</p>
+                    <ul class="tool-list">
                         <li>
-                            <span class="crm-name">HubSpot CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.6/5</div>
-                                <div class="crm-pricing">Free - $50/mo</div>
+                            <span class="tool-name">HubSpot CRM</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.5/10</div>
+                                <div class="tool-pricing">Free - $50/mo</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Pipedrive</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.5/5</div>
-                                <div class="crm-pricing">$15 - $99/mo</div>
+                            <span class="tool-name">Pipedrive</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 9.1/10</div>
+                                <div class="tool-pricing">$15 - $99/mo</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Freshworks CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.4/5</div>
-                                <div class="crm-pricing">Free - $79/mo</div>
+                            <span class="tool-name">Freshworks CRM</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 7.8/10</div>
+                                <div class="tool-pricing">Free - $79/mo</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Zoho CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.3/5</div>
-                                <div class="crm-pricing">$14 - $52/mo</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="crm-category">
-                    <h3>🏢 Enterprise CRM Solutions</h3>
-                    <p>Robust, scalable CRM platforms designed for large organizations with complex sales processes and extensive customization needs.</p>
-                    <ul class="crm-list">
-                        <li>
-                            <span class="crm-name">Salesforce</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.4/5</div>
-                                <div class="crm-pricing">$25 - $300/mo</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="crm-name">Microsoft Dynamics 365</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.3/5</div>
-                                <div class="crm-pricing">$65 - $135/mo</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="crm-name">Oracle CX Sales</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.1/5</div>
-                                <div class="crm-pricing">$75 - $150/mo</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="crm-name">SAP Sales Cloud</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.0/5</div>
-                                <div class="crm-pricing">$80 - $135/mo</div>
+                            <span class="tool-name">Copper CRM</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.3/10</div>
+                                <div class="tool-pricing">$25 - $119/mo</div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="crm-category">
-                    <h3>🎯 Industry-Specific CRMs</h3>
-                    <p>Specialized CRM solutions tailored for specific industries with built-in workflows and compliance features.</p>
-                    <ul class="crm-list">
+                <div class="dev-category">
+                    <h3>⚡ DevOps & Monitoring</h3>
+                    <p>Tools that keep your systems running. Tested in high-load environments by engineers who value uptime.</p>
+                    <ul class="tool-list">
                         <li>
-                            <span class="crm-name">PropertyRadar (Real Estate)</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.5/5</div>
-                                <div class="crm-pricing">$60 - $240/mo</div>
+                            <span class="tool-name">Datadog</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 9.3/10</div>
+                                <div class="tool-pricing">$15 - $23/host</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Veeva CRM (Pharma)</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.3/5</div>
-                                <div class="crm-pricing">Custom pricing</div>
+                            <span class="tool-name">New Relic</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.7/10</div>
+                                <div class="tool-pricing">Free - $0.30/GB</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">DealerSocket (Automotive)</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.2/5</div>
-                                <div class="crm-pricing">Custom pricing</div>
+                            <span class="tool-name">Grafana Cloud</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 9.0/10</div>
+                                <div class="tool-pricing">Free - $8/user</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Redtail CRM (Financial)</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.4/5</div>
-                                <div class="crm-pricing">$39 - $99/mo</div>
+                            <span class="tool-name">PagerDuty</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.5/10</div>
+                                <div class="tool-pricing">$19 - $41/user</div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="crm-category">
-                    <h3>📱 Mobile-First CRMs</h3>
-                    <p>CRM solutions optimized for mobile workflows, perfect for field sales teams and remote workers.</p>
-                    <ul class="crm-list">
+                <div class="dev-category">
+                    <h3>🚀 Project Management</h3>
+                    <p>PM tools that don't suck. GitHub integration, API access, and built by people who understand developer workflows.</p>
+                    <ul class="tool-list">
                         <li>
-                            <span class="crm-name">Base CRM (Zendesk Sell)</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.3/5</div>
-                                <div class="crm-pricing">$19 - $99/mo</div>
+                            <span class="tool-name">Linear</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 9.4/10</div>
+                                <div class="tool-pricing">$8 - $16/user</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Nutshell CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.2/5</div>
-                                <div class="crm-pricing">$16 - $67/mo</div>
+                            <span class="tool-name">GitHub Projects</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.2/10</div>
+                                <div class="tool-pricing">Free - $4/user</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Copper CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.4/5</div>
-                                <div class="crm-pricing">$25 - $119/mo</div>
+                            <span class="tool-name">ClickUp</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 7.9/10</div>
+                                <div class="tool-pricing">Free - $19/user</div>
                             </div>
                         </li>
                         <li>
-                            <span class="crm-name">Close CRM</span>
-                            <div>
-                                <div class="crm-rating">⭐ 4.6/5</div>
-                                <div class="crm-pricing">$25 - $145/mo</div>
+                            <span class="tool-name">Shortcut</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.6/10</div>
+                                <div class="tool-pricing">$8.50 - $20.50/user</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dev-category">
+                    <h3>📊 Analytics & BI</h3>
+                    <p>Data tools with SQL access, API-first architecture, and the ability to build custom dashboards without vendor lock-in.</p>
+                    <ul class="tool-list">
+                        <li>
+                            <span class="tool-name">PostHog</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 9.2/10</div>
+                                <div class="tool-pricing">Free - $0.00045/event</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tool-name">Mixpanel</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.4/10</div>
+                                <div class="tool-pricing">Free - $25/mo</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tool-name">Amplitude</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.1/10</div>
+                                <div class="tool-pricing">Free - $61K/yr</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tool-name">Metabase</span>
+                            <div class="tool-meta">
+                                <div class="tool-rating">★ 8.8/10</div>
+                                <div class="tool-pricing">Free - $85/user</div>
                             </div>
                         </li>
                     </ul>
@@ -618,154 +640,63 @@
         </section>
 
         <section id="comparisons" class="section">
-            <h2 class="section-title">Comprehensive CRM Comparisons</h2>
+            <h2 class="section-title">Developer Tool Comparisons</h2>
 
             <div class="comparison-section">
-                <div class="comparison-header">Popular CRM Features Comparison</div>
+                <div class="comparison-header">CRM Tools - Developer Perspective</div>
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
                                 <th>Feature</th>
                                 <th>HubSpot</th>
-                                <th>Salesforce</th>
                                 <th>Pipedrive</th>
-                                <th>Zoho CRM</th>
+                                <th>Copper</th>
                                 <th>Freshworks</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Free Plan</strong></td>
-                                <td class="feature-excellent">Unlimited contacts</td>
-                                <td class="feature-missing">No</td>
-                                <td class="feature-fair">14-day trial</td>
-                                <td class="feature-good">3 users</td>
-                                <td class="feature-good">3 users</td>
+                                <td><strong>API Quality</strong></td>
+                                <td class="feature-excellent">REST + GraphQL</td>
+                                <td class="feature-good">REST v1</td>
+                                <td class="feature-good">REST v1</td>
+                                <td class="feature-fair">REST (Limited)</td>
                             </tr>
                             <tr>
-                                <td><strong>Contact Management</strong></td>
-                                <td class="feature-excellent">Advanced</td>
-                                <td class="feature-excellent">Advanced</td>
-                                <td class="feature-good">Good</td>
-                                <td class="feature-good">Good</td>
-                                <td class="feature-good">Good</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Sales Pipeline</strong></td>
-                                <td class="feature-excellent">Visual & Custom</td>
-                                <td class="feature-excellent">Highly Custom</td>
-                                <td class="feature-excellent">Excellent</td>
-                                <td class="feature-good">Customizable</td>
-                                <td class="feature-good">Visual</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Email Integration</strong></td>
-                                <td class="feature-excellent">Native Gmail/Outlook</td>
-                                <td class="feature-good">Via Apps</td>
+                                <td><strong>GitHub Integration</strong></td>
+                                <td class="feature-good">Via Zapier</td>
                                 <td class="feature-excellent">Native</td>
-                                <td class="feature-good">Built-in</td>
-                                <td class="feature-good">Built-in</td>
+                                <td class="feature-missing">No</td>
+                                <td class="feature-fair">Third-party</td>
                             </tr>
                             <tr>
-                                <td><strong>Marketing Automation</strong></td>
-                                <td class="feature-excellent">Built-in</td>
-                                <td class="feature-good">Pardot (Extra)</td>
-                                <td class="feature-fair">Basic</td>
-                                <td class="feature-good">Advanced</td>
-                                <td class="feature-good">Included</td>
+                                <td><strong>Webhook Support</strong></td>
+                                <td class="feature-excellent">Full</td>
+                                <td class="feature-excellent">Full</td>
+                                <td class="feature-good">Basic</td>
+                                <td class="feature-good">Basic</td>
                             </tr>
                             <tr>
-                                <td><strong>Reporting & Analytics</strong></td>
-                                <td class="feature-excellent">Advanced</td>
-                                <td class="feature-excellent">Enterprise-grade</td>
-                                <td class="feature-good">Good</td>
-                                <td class="feature-good">Comprehensive</td>
-                                <td class="feature-good">Built-in</td>
+                                <td><strong>Rate Limits</strong></td>
+                                <td class="feature-good">100/10s</td>
+                                <td class="feature-excellent">Generous</td>
+                                <td class="feature-fair">600/min</td>
+                                <td class="feature-poor">50/min</td>
                             </tr>
                             <tr>
-                                <td><strong>Mobile App</strong></td>
-                                <td class="feature-excellent">5/5 Rating</td>
-                                <td class="feature-good">4/5 Rating</td>
-                                <td class="feature-excellent">5/5 Rating</td>
-                                <td class="feature-good">4/5 Rating</td>
-                                <td class="feature-good">4/5 Rating</td>
+                                <td><strong>CLI Tool</strong></td>
+                                <td class="feature-missing">No</td>
+                                <td class="feature-missing">No</td>
+                                <td class="feature-missing">No</td>
+                                <td class="feature-missing">No</td>
                             </tr>
                             <tr>
-                                <td><strong>Third-party Integrations</strong></td>
-                                <td class="feature-excellent">500+</td>
-                                <td class="feature-excellent">3000+</td>
-                                <td class="feature-good">200+</td>
-                                <td class="feature-excellent">500+</td>
-                                <td class="feature-good">250+</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Customer Support</strong></td>
-                                <td class="feature-excellent">24/7 Chat & Phone</td>
-                                <td class="feature-good">Business Hours</td>
-                                <td class="feature-good">Email & Chat</td>
-                                <td class="feature-good">24/7 Email</td>
-                                <td class="feature-good">24/5 Phone</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Learning Curve</strong></td>
-                                <td class="feature-good">Moderate</td>
-                                <td class="feature-poor">Steep</td>
-                                <td class="feature-excellent">Easy</td>
-                                <td class="feature-good">Moderate</td>
-                                <td class="feature-good">Easy-Moderate</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="comparison-section">
-                <div class="comparison-header">Pricing Comparison (Per User/Month)</div>
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Plan Tier</th>
-                                <th>HubSpot</th>
-                                <th>Salesforce</th>
-                                <th>Pipedrive</th>
-                                <th>Zoho CRM</th>
-                                <th>Freshworks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Free/Starter</strong></td>
-                                <td class="feature-excellent">Free</td>
-                                <td class="feature-missing">$25</td>
-                                <td class="feature-good">$15</td>
-                                <td class="feature-excellent">Free</td>
-                                <td class="feature-excellent">Free</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Professional</strong></td>
-                                <td>$50</td>
-                                <td>$80</td>
-                                <td>$29</td>
-                                <td>$20</td>
-                                <td>$29</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Enterprise</strong></td>
-                                <td>$120</td>
-                                <td>$165</td>
-                                <td>$59</td>
-                                <td>$35</td>
-                                <td>$59</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Premium/Ultimate</strong></td>
-                                <td>$1,200</td>
-                                <td>$300</td>
-                                <td>$99</td>
-                                <td>$52</td>
-                                <td>$95</td>
+                                <td><strong>Docker Support</strong></td>
+                                <td class="feature-missing">SaaS Only</td>
+                                <td class="feature-missing">SaaS Only</td>
+                                <td class="feature-missing">SaaS Only</td>
+                                <td class="feature-fair">On-premise</td>
                             </tr>
                         </tbody>
                     </table>
@@ -774,96 +705,131 @@
         </section>
 
         <section id="reviews" class="section">
-            <h2 class="section-title">Expert CRM Reviews</h2>
+            <h2 class="section-title">Honest Developer Reviews</h2>
 
             <div class="reviews-container">
-                <div class="crm-review">
+                <div class="dev-review">
                     <div class="review-header">
-                        <h3 class="review-title">HubSpot CRM</h3>
+                        <h3 class="review-title">Linear - Project Management</h3>
+                        <div class="review-score">9.4/10</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Finally, a PM tool built by developers for developers. Linear feels like what Jira should have been.</p>
+                        
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>Pros</h4>
+                                <ul>
+                                    <li>Lightning-fast UI (sub-100ms)</li>
+                                    <li>Excellent GitHub integration</li>
+                                    <li>Keyboard shortcuts everywhere</li>
+                                    <li>Clean, minimal interface</li>
+                                    <li>Great API and webhooks</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Cons</h4>
+                                <ul>
+                                    <li>No time tracking built-in</li>
+                                    <li>Limited customization</li>
+                                    <li>Still growing feature set</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="feature-highlight">
+                            <strong>Perfect for:</strong> Developer-first teams who want speed and simplicity over enterprise features.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dev-review">
+                    <div class="review-header">
+                        <h3 class="review-title">PostHog - Product Analytics</h3>
+                        <div class="review-score">9.2/10</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Open-source analytics with the flexibility to self-host. Finally, no more vendor lock-in hell.</p>
+                        
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>Pros</h4>
+                                <ul>
+                                    <li>Open source & self-hostable</li>
+                                    <li>All-in-one: analytics + feature flags</li>
+                                    <li>SQL access to raw data</li>
+                                    <li>Generous free tier</li>
+                                    <li>Built-in A/B testing</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Cons</h4>
+                                <ul>
+                                    <li>Self-hosting requires DevOps knowledge</li>
+                                    <li>UI can be overwhelming initially</li>
+                                    <li>Some enterprise features missing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="feature-highlight">
+                            <strong>Perfect for:</strong> Teams who want control over their data and the flexibility of open source.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dev-review">
+                    <div class="review-header">
+                        <h3 class="review-title">Datadog - Monitoring</h3>
+                        <div class="review-score">9.3/10</div>
+                    </div>
+                    <div class="review-content">
+                        <p>The gold standard for observability. Expensive but worth every penny when your app is down at 2am.</p>
+                        
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>Pros</h4>
+                                <ul>
+                                    <li>Best-in-class APM</li>
+                                    <li>Excellent alerting system</li>
+                                    <li>300+ integrations</li>
+                                    <li>Great mobile app</li>
+                                    <li>Powerful query language</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Cons</h4>
+                                <ul>
+                                    <li>Expensive at scale</li>
+                                    <li>Can get overwhelming</li>
+                                    <li>Learning curve for advanced features</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="feature-highlight">
+                            <strong>Perfect for:</strong> Production systems where downtime costs more than the monitoring bill.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dev-review">
+                    <div class="review-header">
+                        <h3 class="review-title">Pipedrive - CRM</h3>
                         <div class="review-score">9.1/10</div>
                     </div>
                     <div class="review-content">
-                        <p>HubSpot CRM stands out as the most comprehensive free CRM available, making it perfect for startups and growing businesses.</p>
+                        <p>The only CRM I've used that doesn't make me want to throw my laptop out the window.</p>
                         
                         <div class="pros-cons">
                             <div class="pros">
                                 <h4>Pros</h4>
                                 <ul>
-                                    <li>Completely free forever plan</li>
-                                    <li>Intuitive, user-friendly interface</li>
-                                    <li>Excellent marketing integration</li>
-                                    <li>Strong reporting capabilities</li>
-                                    <li>Great mobile app</li>
-                                </ul>
-                            </div>
-                            <div class="cons">
-                                <h4>Cons</h4>
-                                <ul>
-                                    <li>Advanced features are expensive</li>
-                                    <li>Limited customization in free plan</li>
-                                    <li>Can become pricey as you scale</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <strong>Best For:</strong> Small to medium businesses looking for an all-in-one sales and marketing platform with strong free features.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="crm-review">
-                    <div class="review-header">
-                        <h3 class="review-title">Salesforce</h3>
-                        <div class="review-score">8.8/10</div>
-                    </div>
-                    <div class="review-content">
-                        <p>The gold standard for enterprise CRM, Salesforce offers unmatched customization and scalability for large organizations.</p>
-                        
-                        <div class="pros-cons">
-                            <div class="pros">
-                                <h4>Pros</h4>
-                                <ul>
-                                    <li>Industry-leading features</li>
-                                    <li>Extensive customization</li>
-                                    <li>Massive app marketplace</li>
-                                    <li>Excellent scalability</li>
-                                    <li>Strong automation tools</li>
-                                </ul>
-                            </div>
-                            <div class="cons">
-                                <h4>Cons</h4>
-                                <ul>
-                                    <li>Steep learning curve</li>
-                                    <li>Expensive pricing</li>
-                                    <li>Can be overwhelming for small teams</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <strong>Best For:</strong> Large enterprises with complex sales processes that need extensive customization and have dedicated admin resources.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="crm-review">
-                    <div class="review-header">
-                        <h3 class="review-title">Pipedrive</h3>
-                        <div class="review-score">9.0/10</div>
-                    </div>
-                    <div class="review-content">
-                        <p>Built by salespeople for salespeople, Pipedrive excels at visual sales pipeline management with exceptional ease of use.</p>
-                        
-                        <div class="pros-cons">
-                            <div class="pros">
-                                <h4>Pros</h4>
-                                <ul>
-                                    <li>Extremely intuitive interface</li>
-                                    <li>Excellent visual pipeline</li>
-                                    <li>Great mobile experience</li>
-                                    <li>Strong sales focus</li>
-                                    <li>Affordable pricing</li>
+                                    <li>Intuitive visual pipeline</li>
+                                    <li>Excellent API documentation</li>
+                                    <li>Native GitHub integration</li>
+                                    <li>Fast, responsive UI</li>
+                                    <li>Good mobile app</li>
                                 </ul>
                             </div>
                             <div class="cons">
@@ -871,192 +837,41 @@
                                 <ul>
                                     <li>Limited marketing features</li>
                                     <li>Basic reporting in lower tiers</li>
-                                    <li>Fewer third-party integrations</li>
+                                    <li>No built-in video calling</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="feature-highlight">
-                            <strong>Best For:</strong> Sales-focused teams that prioritize simplicity and want a CRM that's easy to adopt and use daily.
+                            <strong>Perfect for:</strong> Dev teams selling B2B who need a CRM that actually works.
                         </div>
                     </div>
-                </div>
-
-                <div class="crm-review">
-                    <div class="review-header">
-                        <h3 class="review-title">Zoho CRM</h3>
-                        <div class="review-score">8.5/10</div>
-                    </div>
-                    <div class="review-content">
-                        <p>Part of the comprehensive Zoho suite, this CRM offers excellent value with strong automation and customization capabilities.</p>
-                        
-                        <div class="pros-cons">
-                            <div class="pros">
-                                <h4>Pros</h4>
-                                <ul>
-                                    <li>Great value for money</li>
-                                    <li>Strong automation features</li>
-                                    <li>Integrates with Zoho suite</li>
-                                    <li>Good customization options</li>
-                                    <li>Multiple deployment options</li>
-                                </ul>
-                            </div>
-                            <div class="cons">
-                                <h4>Cons</h4>
-                                <ul>
-                                    <li>Interface can feel dated</li>
-                                    <li>Steeper learning curve</li>
-                                    <li>Limited third-party integrations</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <strong>Best For:</strong> Small to medium businesses already using Zoho products or those needing advanced features at budget-friendly prices.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="crm-review">
-                    <div class="review-header">
-                        <h3 class="review-title">Freshworks CRM</h3>
-                        <div class="review-score">8.7/10</div>
-                    </div>
-                    <div class="review-content">
-                        <p>Modern, AI-powered CRM that combines ease of use with intelligent features to help sales teams work more efficiently.</p>
-                        
-                        <div class="pros-cons">
-                            <div class="pros">
-                                <h4>Pros</h4>
-                                <ul>
-                                    <li>Modern, clean interface</li>
-                                    <li>Built-in phone and email</li>
-                                    <li>AI-powered insights</li>
-                                    <li>Good free plan</li>
-                                    <li>Excellent customer support</li>
-                                </ul>
-                            </div>
-                            <div class="cons">
-                                <h4>Cons</h4>
-                                <ul>
-                                    <li>Limited advanced customization</li>
-                                    <li>Fewer third-party integrations</li>
-                                    <li>Still evolving feature set</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <strong>Best For:</strong> Growing teams that want modern CRM features with AI capabilities and prefer an all-in-one solution.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="crm-review">
-                    <div class="review-header">
-                        <h3 class="review-title">Close CRM</h3>
-                        <div class="review-score">8.9/10</div>
-                    </div>
-                    <div class="review-content">
-                        <p>Built specifically for inside sales teams, Close excels at phone-based selling with integrated calling and email capabilities.</p>
-                        
-                        <div class="pros-cons">
-                            <div class="pros">
-                                <h4>Pros</h4>
-                                <ul>
-                                    <li>Excellent built-in phone system</li>
-                                    <li>Great for inside sales teams</li>
-                                    <li>Strong email integration</li>
-                                    <li>Good mobile app</li>
-                                    <li>Solid reporting features</li>
-                                </ul>
-                            </div>
-                            <div class="cons">
-                                <h4>Cons</h4>
-                                <ul>
-                                    <li>Higher price point</li>
-                                    <li>Limited marketing features</li>
-                                    <li>Fewer customization options</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <strong>Best For:</strong> Inside sales teams and businesses that rely heavily on phone-based selling and need integrated calling features.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="industries" class="section">
-            <h2 class="section-title">CRM Solutions by Industry</h2>
-            
-            <div class="industry-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">🏠</div>
-                    <h3>Real Estate</h3>
-                    <p>PropertyRadar, LionDesk, and Wise Agent offer specialized features for real estate professionals including lead capture, property management, and commission tracking.</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">💊</div>
-                    <h3>Healthcare & Pharma</h3>
-                    <p>Veeva CRM and Microsoft Dynamics 365 for Healthcare provide HIPAA-compliant solutions with specialized workflows for medical professionals.</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">🏦</div>
-                    <h3>Financial Services</h3>
-                    <p>Redtail CRM, Wealthbox, and Salesforce Financial Services Cloud offer compliance features and wealth management tools for advisors.</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">🚗</div>
-                    <h3>Automotive</h3>
-                    <p>DealerSocket, VinSolutions, and Elead CRM provide dealer management features with inventory integration and service scheduling.</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">🛒</div>
-                    <h3>E-commerce</h3>
-                    <p>HubSpot, Salesforce Commerce Cloud, and Shopify Plus offer integrated solutions for online retailers with marketing automation.</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">🏭</div>
-                    <h3>Manufacturing</h3>
-                    <p>SAP Sales Cloud, Oracle CX Sales, and Microsoft Dynamics 365 provide complex B2B features with ERP integration capabilities.</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Why Trust CRMInsider?</h2>
+            <h2 class="section-title">Why Trust Mo.333?</h2>
             
-            <div class="industry-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">🔬</div>
-                    <h3>Hands-On Testing</h3>
-                    <p>We actually use every CRM we review, testing real-world scenarios to give you authentic insights.</p>
+            <div class="dev-categories">
+                <div class="dev-category">
+                    <h3>🔍 Real Usage</h3>
+                    <p>Every tool is tested in actual dev environments. No marketing fluff, just honest assessments from developers who use these tools daily.</p>
                 </div>
                 
-                <div class="industry-card">
-                    <div class="industry-icon">📊</div>
-                    <h3>Data-Driven Analysis</h3>
-                    <p>Our comparisons are based on extensive feature analysis and user feedback from thousands of businesses.</p>
+                <div class="dev-category">
+                    <h3>📖 Open Source</h3>
+                    <p>All reviews are hosted on GitHub. Submit PRs, open issues, or fork the repo. Transparency by default.</p>
                 </div>
                 
-                <div class="industry-card">
-                    <div class="industry-icon">🎯</div>
-                    <h3>Industry Expertise</h3>
-                    <p>Our team includes CRM consultants and sales professionals with decades of combined experience.</p>
+                <div class="dev-category">
+                    <h3>⚡ Developer First</h3>
+                    <p>We evaluate based on what matters to developers: API quality, documentation, GitHub integration, and workflow compatibility.</p>
                 </div>
                 
-                <div class="industry-card">
-                    <div class="industry-icon">🔄</div>
-                    <h3>Regular Updates</h3>
-                    <p>We continuously monitor CRM platforms for new features, pricing changes, and market developments.</p>
+                <div class="dev-category">
+                    <h3>🎯 No BS</h3>
+                    <p>We call out bad UX, poor APIs, and vendor lock-in. If a tool sucks, we'll tell you exactly why.</p>
                 </div>
             </div>
         </section>
@@ -1066,43 +881,35 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>CRM Categories</h3>
-                    <a href="#crms">Small Business CRMs</a>
-                    <a href="#crms">Enterprise Solutions</a>
-                    <a href="#crms">Industry-Specific</a>
-                    <a href="#crms">Mobile-First CRMs</a>
-                    <a href="#comparisons">Feature Comparisons</a>
-                    <a href="#industries">By Industry</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Popular Reviews</h3>
-                    <a href="#reviews">HubSpot CRM</a>
-                    <a href="#reviews">Salesforce</a>
-                    <a href="#reviews">Pipedrive</a>
-                    <a href="#reviews">Zoho CRM</a>
-                    <a href="#reviews">Freshworks CRM</a>
-                    <a href="#reviews">Close CRM</a>
+                    <h3>Tool Categories</h3>
+                    <a href="#tools">CRM for Developers</a>
+                    <a href="#tools">DevOps & Monitoring</a>
+                    <a href="#tools">Project Management</a>
+                    <a href="#tools">Analytics & BI</a>
                 </div>
                 <div class="footer-section">
                     <h3>Resources</h3>
-                    <a href="#">CRM Implementation Guide</a>
-                    <a href="#">ROI Calculator</a>
-                    <a href="#">Migration Checklist</a>
-                    <a href="#">Best Practices</a>
-                    <a href="#">CRM Glossary</a>
-                    <a href="#">Free Templates</a>
+                    <a href="#comparisons">Tool Comparisons</a>
+                    <a href="#reviews">Developer Reviews</a>
+                    <a href="#">API Documentation</a>
+                    <a href="#">Integration Guides</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="#">About CRMInsider</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Advertise With Us</a>
-                    <a href="#">Newsletter</a>
+                    <h3>Community</h3>
+                    <a href="#">GitHub Repository</a>
+                    <a href="#">Submit Review</a>
+                    <a href="#">Report Issue</a>
+                    <a href="#">Contribute</a>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <a href="#">About Mo.333</a>
+                    <a href="#">Review Process</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
                 </div>
             </div>
-            <p>&copy; 2024 CRMInsider. All rights reserved. | Your trusted source for CRM software reviews and comparisons since 2019.</p>
+            <p>&copy; 2024 Mo.333 | Open-source developer reviews | GitHub: @mo-dot-333</p>
         </div>
     </footer>
 </body>
